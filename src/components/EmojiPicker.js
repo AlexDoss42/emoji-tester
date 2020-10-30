@@ -8,7 +8,7 @@ const EmojiPicker = () => {
 
   const onEmojiClick = (event, emojiObject) => {
     setChosenEmoji(emojiObject);
-    setMsgText(msgText + chosenEmoji.emoji);
+    setMsgText(msgText + emojiObject.emoji);
   };
 
   const showPickerHandler = () => {
@@ -23,7 +23,10 @@ const EmojiPicker = () => {
         <span>No emoji Chosen</span>
       )}
       {showPicker ? (
-        <Picker onEmojiClick={onEmojiClick} />
+        <div>
+          <p onClick={showPickerHandler}>abc</p>
+          <Picker onEmojiClick={onEmojiClick} />
+        </div>
       ) : (
         <i className='far fa-smile' onClick={showPickerHandler}></i>
       )}
