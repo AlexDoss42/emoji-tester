@@ -1,11 +1,11 @@
 import './App.css';
-import EmojiPicker from './components/EmojiPicker';
+import ChatView from './components/ChatView';
 
 function App() {
   return (
     <div className='App'>
       <h1>THE EMOJI TESTER</h1>
-      <EmojiPicker />
+      <ChatView />
     </div>
   );
 }
